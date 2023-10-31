@@ -3,10 +3,27 @@ function avg(numbers) {
     return s / numbers.length;
 }
 function prime(num) {
-    return false;
+    if(num<2) {
+        return false;
+    }
+    for (let i=2; i*i<=num; i++) {
+        if(num%i===0) {
+            return false;
+        }
+    }
+    return true;
 }
+
 function fact(num) {
-    return -1;
+    if(num>15) {
+        return -1;
+    }
+    
+    let fact=1;
+    for(let i=num; i>0; i--) {
+        fact=fact*i;
+    }
+    return fact;
 }
 module.exports = {
     avg,
